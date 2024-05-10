@@ -62,6 +62,8 @@ public class PlayerMove : MonoBehaviour
             if (Input.GetButton("Jump") && !isJumping)
             {
                 isJumping = true;
+                animator.SetBool("jumping", isJumping);
+
                 StartCoroutine(Jump());
             }
         } 
@@ -81,5 +83,6 @@ public class PlayerMove : MonoBehaviour
         }
 
         isJumping = false;
+        animator.SetBool("jumping", isJumping);
     }
 }
