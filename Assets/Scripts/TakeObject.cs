@@ -17,7 +17,7 @@ public class TakeObject : MonoBehaviour
     {
         if (pickedObject != null)
         {
-            if (Input.GetKey("r"))
+            if (Input.GetButton("Des-interactive"))
             {
                 ReleaseObject();
             }
@@ -30,7 +30,7 @@ public class TakeObject : MonoBehaviour
         {
             TextDetected.SetActive(true);
 
-            if (Input.GetKey("e"))
+            if (Input.GetButton("Interactive"))
             {
                 PickUpObject(other.gameObject);
             }

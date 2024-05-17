@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -29,10 +30,11 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MovePlayer();
+        var gamepad = Gamepad.current;
+        MovePlayer(gamepad);
     }
 
-    void MovePlayer()
+    void MovePlayer(Gamepad gamepad)
     {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
