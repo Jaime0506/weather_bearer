@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Object
   - TeleportBox
+  - NPC
   layers:
   - Default
   - TransparentFX
